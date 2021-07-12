@@ -1,24 +1,10 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import AppRouter from './src/routers/app.router';
-import './style.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './src/app';
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
-
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return <AppRouter/>;
-  }
-}
-
-render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
